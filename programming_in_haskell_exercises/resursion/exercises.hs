@@ -16,7 +16,7 @@ myreplicate :: Int -> a -> [a]
 myreplicate 0 _ = []
 myreplicate n value = value : myreplicate (n - 1) value
 
--- Select the nTh element of a list
+-- Select the nTh element of a list TODO Finish
 (!!) :: [a] -> Int -> a
 (!!) [] _ = error "Empty List"
 (!!) (x:xs) n =

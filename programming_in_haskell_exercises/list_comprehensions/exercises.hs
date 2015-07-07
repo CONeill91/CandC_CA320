@@ -32,3 +32,9 @@ perfect a = if a == sum(factors a) then True else False
 factors :: Int -> [Int]
 factors x = [a | a <- [1..(x -1)], x `mod` a == 0]
 
+-- Question 3
+-- The scalar product of two lists of integers xs and ys of length n is give by the sum of the products of the corresponding integers
+scalar :: [Int] -> [Int] -> Int
+scalar [] _ = 0
+scalar _ [] = 0
+scalar xs ys = sum [a * b | (a,b) <- zip xs ys]
